@@ -6,15 +6,16 @@
             <img src="images/banner.gif">
             <div class="controles">
             <label for="username">Usuario:</label>
-            <input type="text" size="20" maxlength="20" id="username" name="username" class="input-block-level" placeholder="Login"/>
-            <div class="MiError"><?php echo form_error('username'); ?></div>
+            <input type="text" size="20" maxlength="20" id="txtuser" name="txtuser" class="input-block-level" placeholder="Login" required/>
+            <!-- <div class="MiError"><?php //echo form_error('txtuser'); ?></div> -->
             
             <label for="password">Password:</label>
-            <input type="password" size="20" maxlength="20" id="password" name="password" class="input-block-level" placeholder="Password"/>
-            <div class="MiError"><?php echo form_error('password'); ?></div>
+            <input type="password" size="20" maxlength="20" id="txtpass" name="txtpass" class="input-block-level" placeholder="Password" required/>
+            <!-- <div class="MiError"><?php //echo form_error('password'); ?></div> -->
             
             <input type="submit" value="Login" class="btn btn-primary" />
-            <?php // echo validation_errors(); ?>
+            <div class="alert" style="display:<?=$Error?>">
+                <?php  echo validation_errors(); ?>
             </div>
             </form>
         </div>

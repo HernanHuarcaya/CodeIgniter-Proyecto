@@ -37,6 +37,7 @@
       
       .controles input[type="submit"]{
            margin-right: 0px;
+           margin-bottom: 10px;
       }
       .form-signin img {
           width: 300px;
@@ -48,4 +49,7 @@
           margin: 10px;
       }
       
+      .alert {
+          color: #A70000;
+      }
       

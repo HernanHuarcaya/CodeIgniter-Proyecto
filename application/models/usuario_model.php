@@ -1,6 +1,6 @@
 <?php
 
-Class User extends CI_Model {
+Class Usuario_model extends CI_Model {
 
     function login($username, $password) {
         $this->db->select('idusuario,nombre_completo,usuario,password');
