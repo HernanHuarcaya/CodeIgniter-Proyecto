@@ -3,7 +3,7 @@
                 <ul class="nav pull-right">
                     <li id="fat-menu" class="dropdown">
                         <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-user"></i> Admin
+                            <i class="icon-user"></i> <?=$xsesion['nombre_completo'];?>
                             <i class="icon-caret-down"></i>
                         </a>
 
@@ -12,7 +12,7 @@
                             <li class="divider"></li>
                             <li><a tabindex="-1" class="visible-phone" href="#">Accessos</a></li>
                             <li class="divider visible-phone"></li>
-                            <li><a tabindex="-1" href="sign-in.html">Cerrar Sesi&oacute;n</a></li>
+                            <li><a tabindex="-1" href="<?= $this->config->base_url() ?>login/cerrar_sesion">Cerrar Sesi&oacute;n</a></li>
                         </ul>
                     </li>
 

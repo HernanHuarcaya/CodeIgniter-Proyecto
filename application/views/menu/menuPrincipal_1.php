@@ -1,5 +1,4 @@
-<?php var_dump($modulos); ?>
-<div class="sidebar-nav">
+        <div class="sidebar-nav">
             <a href="#ventas-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>Ventas<i class="icon-chevron-up"></i></a>
             <!-- se pone "class="nav-header" data-toggle="collapse"> para que se vea el icono hacia abajo-->
             <ul id="ventas-menu" class="nav nav-list collapse in"> <!-- se le pone class="nav nav-list collapse in"  "in" al final para que visualize-->
@@ -9,6 +8,7 @@
                 <li ><a href="user.html">Cotizaci&oacute;n</a></li>
                 <li ><a href="media.html">Pedidos</a></li>
                 <li ><a href="calendar.html">Orden de Produci&oacute;n</a></li>
+
             </ul>
 
             <a href="#compras-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-briefcase"></i>Compras<i class="icon-chevron-up"></i></a>
