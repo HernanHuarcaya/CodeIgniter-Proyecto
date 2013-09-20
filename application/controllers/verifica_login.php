@@ -23,7 +23,7 @@ class verifica_login extends CI_Controller {
             //HH: consulto si tiene el perfil de administrador
             if ($this->session->userdata['Datos_Session']['idperfil']==='1')
                 {
-                    redirect('../administracion/principal','refresh');
+                    redirect('../administracion/panel','refresh');
                 } 
             //HH: consulto si tiene el perfil de usuarios
             if ($this->session->userdata['Datos_Session']['idperfil']==='2')    

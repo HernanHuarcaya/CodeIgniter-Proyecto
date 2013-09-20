@@ -23,7 +23,9 @@ class Panel extends CI_Controller {
         $this->load->view('header/header');
         $this->load->view('header/bannerUser');
         $this->load->view('menu/menuPrincipal');
-        $this->load->view('usuarios/contenedor_principal');
+        $this->load->view('administracion/vistas/vistaClienteConsultas');
+        $this->load->view('administracion/contenedor_principal');
         $this->load->view('footer/footer');
     }
+
 }

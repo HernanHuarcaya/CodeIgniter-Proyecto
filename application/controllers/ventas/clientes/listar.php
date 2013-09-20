@@ -4,11 +4,11 @@ if (!defined('BASEPATH'))
 //HH: para definir las sesiones y saber si puede visualizar
 session_start();
 
-class Panel extends CI_Controller {
+class Listar extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model('usuario_model');
+                $this->load->model('usuario_model');
         $this->load->library('session');
     }
 
@@ -18,12 +18,12 @@ class Panel extends CI_Controller {
         //echo $data['xsesion']['id'];
         $modulos = $this->usuario_model->modulos_usuario($data['xsesion']['id']);
         $data['modulos']= $modulos;
-        $data['modulo_activo']=""; //HH: inicia vacio para el panel
+        $data['modulo_activo']="4"; //HH: idsub_modulo de la tabla sub_modulo de la BD
         $this->load->vars($data);
         $this->load->view('header/header');
         $this->load->view('header/bannerUser');
         $this->load->view('menu/menuPrincipal');
-        $this->load->view('usuarios/contenedor_principal');
+        $this->load->view('ventas/clientes/listar');
         $this->load->view('footer/footer');
     }
 }
