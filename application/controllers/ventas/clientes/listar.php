@@ -8,7 +8,8 @@ class Listar extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-                $this->load->model('usuario_model');
+        $this->load->model('usuario_model');
+        $this->load->model('clientes/cliente_model');
         $this->load->library('session');
     }
 
@@ -20,10 +21,19 @@ class Listar extends CI_Controller {
         $data['modulos']= $modulos;
         $data['modulo_activo']="4"; //HH: idsub_modulo de la tabla sub_modulo de la BD
         $this->load->vars($data);
-        $this->load->view('header/header');
+        $this->load->view('ventas/clientes/header/header_cliente');
         $this->load->view('header/bannerUser');
         $this->load->view('menu/menuPrincipal');
         $this->load->view('ventas/clientes/listar');
         $this->load->view('footer/footer');
     }
+    
+    public function listar_cliente($cadena="",$tipo=""){
+        $lista_clientes = $this->cliente_model->listar_clientes($cadena,$tipo);
+        $data['clientes'] = $lista_clientes;
+        $this->load->vars($data);
+        $this->load->view("ventas/clientes/listar_resultados");
+    }
+    
+    
 }

@@ -5,7 +5,7 @@ $val_inicial = "0"; //HH: indicador de inicio del menu
 echo "<div class='sidebar-nav'>";
 if ($modulos <> false) { //HH: verificando si tiene registros
     foreach ($modulos as $modulo) {
-        //HH: consulto
+        //HH: Consulto si es un sub modulo para activarlo.
         $xIn = "";
         $xClass = "";
         if ($modulo_activo <> "") {
